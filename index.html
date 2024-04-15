@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="pokematch_icon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>PokéMatch</title>
+  </head>
+  <body>
+    <div class="background-container"></div>
+    <div class="overlay"></div>
+    <div class="description">
+      <h1>Welcome to PokéMatch</h1>
+      <br />
+      <p>The ultimate destination for Pokémon enthusiasts!</p>
+      <br />
+      <p>
+        Challenge yourself to identify Pokémon based on their characteristics,
+        including their generation, type, height, and weight.
+      </p>
+      <br />
+      <div class="circles">
+        <div class="circle-1">X</div>
+        &nbsp; - "X" is Correct &nbsp;
+        <div class="circle-2">X</div>
+        &nbsp; - "X" is incorrect &nbsp;
+        <div class="circle-3">X</div>
+        &nbsp; - Less than "X" &nbsp;
+        <div class="circle-4">X</div>
+        &nbsp; - Greater than "X" &nbsp;
+      </div>
+      <br />
+    </div>
+    <div id="god-container">
+      <div id="headings">
+        <div id="gen">Gen</div>
+        <div id="type-1">Type 1</div>
+        <div id="type-2">Type 2</div>
+        <div id="height">Height</div>
+        <div id="weight">Weight</div>
+        <div id="name">Name</div>
+      </div>
+      <div id="pokemon-container"></div>
+    </div>
+    <div id="pokemon-list"></div>
+    <div id="input-container">
+      <input type="text" id="search" placeholder="Enter a letter..." />
+      <button id="submit" type="submit">Submit</button>
+    </div>
+    <div id="generation-range">
+      From:
+      <input type="text" id="from-gen" value="1" />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To:
+      <input type="text" id="to-gen" value="9" />
+    </div>
+    <button type="button" id="new-game">New Game</button>
+    <div class="help"><a href="https://hubpokehub.netlify.app/" target="_blank">Got Stuck !!! Need Help ?</a></div>
+    <div class="other-games"><a href="https://gotta-guess-em-all.netlify.app/" target="_blank">Wanna Play Other Games ?</a></div>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

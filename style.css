@@ -1,0 +1,257 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Signika Negative", sans-serif;
+    font-weight: bold;
+}
+
+body {
+    color: white;
+}
+
+.background-container {
+    background-image: url(pokematch_background.webp);
+    background-size: 87%;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    filter: blur(10px);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 98%;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.4rem;
+}
+
+.circles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-1,
+.circle-2,
+.circle-3,
+.circle-4 {
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 0.2rem solid black;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black;
+}
+
+.circle-1 {
+    background-color: lime;
+}
+
+.circle-2 {
+    background-color: red;
+}
+
+.circle-3 {
+    background-color: cyan;
+}
+
+.circle-4 {
+    background-color: yellow;
+}
+
+#headings {
+    display: flex;
+    gap: 6.2rem;
+    font-size: 1.5rem;
+    padding: 0 3rem 1rem 3rem;
+    border-bottom: 0.1rem solid white;
+    margin-left: -3rem;
+}
+
+span {
+    color: black;
+}
+
+.circle-div {
+    width: 5.2rem;
+    height: 5.2rem;
+    border-radius: 50%;
+    border: 0.2rem solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    font-size: 20px;
+    text-shadow: 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black;
+}
+
+.circles-container {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    text-align: left;
+    width: 1000px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#god-container {
+    position: fixed;
+    top: 31%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pokemon-container {
+    height: 53vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#pokemon-container p {
+    text-align: center;
+    font-size: 2rem;
+    padding: 1.5rem 0 0.5rem 0;
+    font-weight: 1000;
+
+}
+
+#input-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    text-align: center;
+    border-top: 0.1rem solid white;
+    z-index: 1;
+    height: 100px;
+}
+
+#pokemon-list {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    bottom: 11%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    cursor: pointer;
+    overflow-y: auto;
+    max-height: calc(100vh - 7rem);
+    font-size: 1.5rem;
+    visibility: hidden;
+    backdrop-filter: blur(100px);
+}
+
+.pokemon-item {
+    border: 0.2rem solid white;
+    padding: 0.5rem 3rem;
+}
+
+.pokemon-name {
+    margin-left: 1.7rem;
+    font-size: 1.5rem;
+}
+
+input[type="text"] {
+    width: 30%;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+}
+
+button[type="submit"] {
+    font-size: 2rem;
+    width: 15%;
+    padding: 1rem 2rem;
+    font-weight: 600;
+}
+
+#generation-range {
+    position: fixed;
+    left: 5%;
+    z-index: 1;
+    gap: 2rem;
+    font-size: 1.5rem;
+}
+
+#from-gen,
+#to-gen {
+    width: 7%;
+    padding: 0.8rem 0.3rem;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    border: none;
+}
+
+#new-game {
+    position: fixed;
+    right: 9%;
+    z-index: 1;
+    border-radius: 11rem;
+    padding: 1rem;
+    border: none;
+}
+
+#generation-range,
+#new-game {
+    bottom: 2%;
+    font-size: 1.3rem;
+}
+
+.help,
+.other-games {
+    position: fixed;
+    bottom: 11%;
+    font-size: 1.2rem;
+    font-weight: 1000;
+    letter-spacing: 0.1px;
+}
+
+.help {
+    right: 1%;
+}
+
+.other-games {
+    left: 1%;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+#pokemon-list::-webkit-scrollbar {
+    display: none;
+}
+
+#pokemon-container::-webkit-scrollbar {
+    display: none;
+}
